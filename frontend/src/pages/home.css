@@ -1,0 +1,121 @@
+/* Hero banner */
+.hero-banner {
+  background: url('https://i.imgur.com/VItEdHZ.jpg') no-repeat center center;
+  background-size: cover;
+  padding: 50px;
+  text-align: center;
+  color: white;
+}
+
+.hero-location {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+.hero-btn {
+  background-color: #ff6600;
+  color: white;
+  font-size: 1.1rem;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.hero-btn:hover {
+  background-color: #e55a00;
+}
+
+/* Countdown */
+.countdown {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  font-size: 1.2rem;
+  margin-top: 20px;
+}
+
+/* Section styling */
+.section {
+  padding: 50px 0;
+  text-align: center;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.card {
+  background-color: #f1f1f1;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Judges Section */
+.judge-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  justify-items: center;
+}
+
+.judge-card {
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.judge-card img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Hover effect for the image */
+.judge-card:hover img {
+  transform: scale(1.1); /* Zoom in */
+  opacity: 0.9; /* Slightly fade the image */
+}
+
+/* Hover effect: Add a shadow and scale the judge card */
+.judge-card:hover {
+  transform: scale(1.05); /* Slightly scale up the card */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Add a stronger shadow */
+}
+
+/* Optional: Add some padding and spacing for text */
+.judge-card h3, .judge-card p {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.judge-card p {
+  font-size: 0.9rem;
+  color: gray;
+}
+
+/* Optional: Make the grid responsive */
+@media screen and (max-width: 768px) {
+  .judge-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .judge-grid {
+    grid-template-columns: 1fr;
+  }
+}

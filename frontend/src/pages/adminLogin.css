@@ -1,0 +1,117 @@
+.admin-login-container {
+  min-height: 100vh;
+  background:
+    linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.9)),
+    url("https://images.unsplash.com/photo-1511379938547-c1f69419868d");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.admin-login-card {
+  width: 100%;
+  max-width: 420px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(14px);
+  border-radius: 20px;
+  padding: 35px;
+  box-shadow: 0 30px 75px rgba(0, 0, 0, 0.6);
+  text-align: center;
+  color: #fff;
+  animation: fadeIn 0.6s ease;
+}
+
+.admin-login-card h2 {
+  margin-bottom: 5px;
+}
+
+.subtitle {
+  font-size: 0.95rem;
+  opacity: 0.8;
+  margin-bottom: 25px;
+}
+
+/* FORM */
+.admin-login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.field {
+  text-align: left;
+}
+
+.field label {
+  font-size: 0.85rem;
+  opacity: 0.8;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.field input {
+  width: 100%;
+  padding: 13px 15px;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  font-size: 0.95rem;
+}
+
+.field input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.field input:focus {
+  outline: 2px solid #ffcc00;
+}
+
+/* BUTTON */
+.login-btn {
+  margin-top: 10px;
+  padding: 14px;
+  border-radius: 999px;
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  background: linear-gradient(135deg, #ffcc00, #ff9900);
+  color: #111;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.login-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px rgba(255, 204, 0, 0.8);
+}
+
+/* ERROR */
+.error-msg {
+  margin-top: 15px;
+  color: #ff6666;
+  font-weight: bold;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* MOBILE */
+@media (max-width: 500px) {
+  .admin-login-card {
+    padding: 25px;
+  }
+}

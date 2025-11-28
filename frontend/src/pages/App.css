@@ -1,0 +1,80 @@
+/* =======================
+   NAV BAR CONTAINER
+======================= */
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  padding: 18px 20px;
+  background: rgba(15, 15, 25, 0.85);
+  backdrop-filter: blur(12px);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+/* =======================
+   NAV LINKS → BUTTON STYLE
+======================= */
+.nav a {
+  padding: 12px 26px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: 0.4px;
+  position: relative;
+  transition: all 0.25s ease;
+}
+
+/* Hover effect */
+.nav a:hover {
+  background: rgba(255, 204, 0, 0.2);
+  color: #ffcc00;
+  transform: translateY(-2px);
+}
+
+/* =======================
+   REGISTER BUTTON (HIGHLIGHT)
+======================= */
+.nav a[href="/register"] {
+  background: linear-gradient(135deg, #ffcc00, #ff9900);
+  color: #111;
+  box-shadow: 0 8px 25px rgba(255,204,0,0.6);
+}
+
+.nav a[href="/register"]:hover {
+  background: linear-gradient(135deg, #ffd633, #ffae42);
+  box-shadow: 0 12px 35px rgba(255,204,0,0.85);
+}
+
+/* =======================
+   ADMIN BUTTON
+======================= */
+.nav a[href="/admin-login"] {
+  border: 2px solid #4ade80;
+  color: #4ade80;
+}
+
+.nav a[href="/admin-login"]:hover {
+  background: #4ade80;
+  color: #0b0b10;
+}
+
+/* =======================
+   MOBILE RESPONSIVE
+======================= */
+@media (max-width: 600px) {
+  .nav {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .nav a {
+    padding: 10px 18px;
+    font-size: 0.85rem;
+  }
+}
